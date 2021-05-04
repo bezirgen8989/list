@@ -1,0 +1,22 @@
+.infoBlock{
+    display: inline-flex;
+}
+
+.infoBlock img{
+    width: 35%;
+    border-radius: 35%;
+    margin: 4px 25px 0 5px;
+}
+.textInfo{
+    display: inline-grid;
+}
+
+.contentList li{
+    border: 1px solid black;
+    margin: 0 0 20px 0;
+    border-radius: 70px;
+    list-style-type: none;
+}
+.contentList {
+    padding: 0 5px 0 5px;
+}

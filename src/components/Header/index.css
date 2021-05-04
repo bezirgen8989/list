@@ -1,0 +1,48 @@
+.Header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 3rem;
+  box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
+  background-color: antiquewhite;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  grid-template-areas: "searchBlock"
+                        "changePageBlock";
+}
+
+.Header-logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Header-logo {
+    animation: Header-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes Header-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.changePage {
+  text-align: center;
+  grid-area: changePageBlock;
+}
+
+.searchBlock{
+  grid-area: searchBlock;
+  margin: 0 0 20px 0;
+}

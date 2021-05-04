@@ -6,7 +6,7 @@ const ContentList = ({content}) => {
         <ul className={'contentList'}>
             {content.map(item => {
                 return (
-                    <li key={item.id}>
+                    <li key={String(item.id)}>
                         <div className={'infoBlock'}>
                             <img src={item.image} alt={item.image}/>
                             <div className={'textInfo'}>

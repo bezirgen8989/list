@@ -3,8 +3,8 @@
 }
 
 .infoBlock img{
-    width: 35%;
-    border-radius: 35%;
+    width: 20%;
+    border-radius: 30px;
     margin: 4px 25px 0 5px;
 }
 .textInfo{
@@ -12,10 +12,17 @@
 }
 
 .contentList li{
+    max-height: 15%;
     border: 1px solid black;
-    margin: 0 0 20px 0;
-    border-radius: 70px;
+    margin: 0 0 5px 0;
+    border-radius: 30px;
     list-style-type: none;
+    background-color: rgba(250,235,215, 0.7);
+    transition: ease-in-out .3s;
+}
+.contentList li:hover{
+    background-color: rgba(255,127,80, 0.8);
+    transition: ease .3s;
 }
 .contentList {
     padding: 0 5px 0 5px;

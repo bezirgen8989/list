@@ -4,13 +4,19 @@
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 3rem;
+  padding: 1.5rem;
   box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
-  background-color: antiquewhite;
+  background-color: rgba(250,235,215, 0.9);
+  transition: ease-in-out .3s;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   grid-template-areas: "searchBlock"
                         "changePageBlock";
+}
+
+.Header:hover{
+  transition: ease .3s;
+  background-color: coral;
 }
 
 .Header-logo {

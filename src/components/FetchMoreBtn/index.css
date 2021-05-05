@@ -34,3 +34,7 @@
     color: white;
     transition: ease .3s;
 }
+
+.disableBtn{
+    display: none;
+}

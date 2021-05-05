@@ -6,10 +6,7 @@ const FetchMoreButton = ({btnText, clickFoo, disableInfo})=>{
         <div className={'fetchMore'}>
             <button
                 onClick={clickFoo}
-                style={disableInfo
-                    ? {display: 'none'}
-                    : null
-                }
+                className={disableInfo ? 'disableBtn' : null}
             >{btnText}</button>
         </div>
 

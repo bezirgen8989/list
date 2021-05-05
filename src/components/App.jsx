@@ -4,7 +4,7 @@ import ContentList from "./ContentList";
 import {useFetchContent} from "../hooks/useFetchContent";
 import "./App.css";
 import FetchMoreButton from "./FetchMoreBtn";
-import LoadingPage from "./Loading/Loading";
+import Loading from "./Loading/Loading";
 import Alert from "./Alert/Alert";
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
                 prevPage={prevPage}
             />
             {isLoading
-                ? <LoadingPage/>
+                ? <Loading/>
                 : <ContentList content={characters}/>
             }
 

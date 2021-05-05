@@ -1,7 +1,7 @@
 import React from 'react';
 import './Loading.css'
 
-const LoadingPage = ()=>{
+const Loading = ()=>{
     return (
         <div className={'loadingStyle'}>
             <div className="lds-ring">
@@ -14,4 +14,4 @@ const LoadingPage = ()=>{
     )
 }
 
-export default LoadingPage;
+export default Loading;

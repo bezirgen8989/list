@@ -7,11 +7,13 @@ export const useFetchContent = () => {
     const [dataInfo, setDataInfo] = useState([]);
     const [charactersCount, setCharactersCount] = useState(10)
     const [isLoading, setIsLoading] = useState(false)
+    const [errStatus, setErrStatus] = useState(false)
+    const [errMessage, setErrMessage] = useState('Something wrong')
 
-    useEffect(()=>{
+    useEffect(() => {
         setIsLoading(true)
         axios.get(url)
-            .then(res=>{
+            .then(res => {
                 const allElems = res.data.results;
                 setCharacters(allElems.slice(0, charactersCount));
                 setDataInfo(res.data.info);
@@ -19,23 +21,36 @@ export const useFetchContent = () => {
             })
     }, [url, charactersCount])
 
-    const nextPage = useCallback(()=>{
+    const nextPage = useCallback(() => {
         setUrl(dataInfo.next)
         setCharactersCount(10)
     }, [dataInfo])
 
-    const prevPage = useCallback(()=>{
+    const prevPage = useCallback(() => {
         setCharactersCount(10)
         setUrl(dataInfo.prev)
     }, [dataInfo])
 
-    const fetchMore = useCallback(()=>{
+    const fetchMore = useCallback(() => {
         setCharactersCount(prevState => prevState + 10)
     }, [])
 
-    const fetch = useCallback((searchInputData) => {
-        setUrl(`https://rickandmortyapi.com/api/character/?name=${searchInputData}`)
-    }, []);
+    const fetch = useCallback(async (searchInputData) => {
+        try {
+            await axios.get(`${url}?name=${searchInputData}`)
+                .then(res => {
+                    setCharacters(res.data.results)
+                })
+        } catch (err) {
+            setErrStatus(true)
+            setTimeout(()=>{
+                setErrStatus(false)
+            }, 3000)
+            setErrMessage(err.response.data.error)
+        }
 
-    return [characters, dataInfo, fetch, nextPage, prevPage, fetchMore, isLoading];
+
+    }, [url]);
+
+    return [characters, dataInfo, fetch, nextPage, prevPage, fetchMore, isLoading, errMessage, errStatus];
 };

@@ -5,11 +5,27 @@ import {useFetchContent} from "../hooks/useFetchContent";
 import "./App.css";
 import FetchMoreButton from "./FetchMoreBtn";
 import LoadingPage from "./Loading/Loading";
+import Alert from "./Alert/Alert";
 
 const App = () => {
-    const [characters, dataInfo, fetch, nextPage, prevPage, fetchMore, isLoading] = useFetchContent();
+    const [
+        characters,
+        dataInfo,
+        fetch,
+        nextPage,
+        prevPage,
+        fetchMore,
+        isLoading,
+        errMessage,
+        errStatus] = useFetchContent();
+
     return (
         <div className="App">
+            {errStatus
+                ?<Alert errorMessage={errMessage}/>
+                : null
+            }
+
             <Header
                 onSearch={fetch}
                 disabledInfoNext={dataInfo.next}

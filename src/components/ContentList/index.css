@@ -1,33 +1,31 @@
 @media only screen and (min-width: 321px) {
     .contentList li{
-        max-height: 15%;
-        margin: 0 0 5px 0;
-        border-radius: 30px;
-        list-style-type: none;
-        background-color: rgba(250,235,215, 0.7);
-        transition: ease-in-out .3s;
         font-size: 75%;
     }
 }
 
 @media only screen  and (min-width: 1224px) {
     .contentList li{
-        max-height: 15%;
         max-width: 50%;
-        margin: 0 0 5px 0;
-        border-radius: 30px;
-        list-style-type: none;
-        background-color: rgba(250,235,215, 0.7);
-        transition: ease-in-out .3s;
         font-size: 120%;
-    }
-    .contentList li:hover{
-        background-color: rgba(255,127,80, 0.8);
-        transition: ease .3s;
     }
 }
 
+.contentList li{
+    transition: ease-in-out .3s;
+    max-height: 15%;
+    margin: 0 0 5px 0;
+    border-radius: 30px;
+    background-color: rgba(250,235,215, 0.7);
+    list-style-type: none;
+}
+.contentList li:hover{
+    background-color: rgba(255,127,80, 0.8);
+    transition: ease .3s;
+}
+
 .infoBlock img{
+    list-style-type: none;
     width: 30%;
     height: 30%;
     border-radius: 30px;

@@ -1,9 +1,3 @@
-@media (max-width: 376px) {
-  .Button {
-    background-color: red;
-  }
-}
-
 .Button {
   min-height: 2rem;
   background-color: #767676;

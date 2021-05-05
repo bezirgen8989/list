@@ -1,4 +1,4 @@
-@media (max-width: 376px) {
+@media only screen and (min-width: 321px) {
   .Header-logo {
     max-width: 70px;
     max-height: 70px;

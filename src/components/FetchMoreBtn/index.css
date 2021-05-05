@@ -1,40 +1,36 @@
 @media only screen and (min-width: 321px) {
     .fetchMore button{
-        background-color: wheat;
-        border: none;
-        width: 100%;
         min-height: 7vh;
-        margin-bottom: -17px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
         font-size: 120%;
-        transition: ease-in-out .3s;
     }
 }
 
-@media only screen  and (min-width: 1824px) {
+@media only screen  and (min-width: 1224px) {
     .fetchMore{
         text-align: center;
     }
 
     .fetchMore button{
-        background-color: wheat;
-        border: none;
-        width: 100%;
         min-height: 15vh;
-        margin-bottom: -17px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
-        cursor: pointer;
         font-size: 150%;
-        transition: ease-in-out .3s;
     }
+}
 
-    .fetchMore button:hover{
-        background-color: coral;
-        color: white;
-        transition: ease .3s;
-    }
+.fetchMore button{
+    cursor: pointer;
+    background-color: wheat;
+    border: none;
+    width: 100%;
+    margin-bottom: -17px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
+    transition: ease-in-out .3s;
+}
 
+.fetchMore button:hover{
+
+    background-color: coral;
+    color: white;
+    transition: ease .3s;
 }

@@ -1,29 +1,57 @@
-.infoBlock{
-    display: inline-flex;
+@media only screen and (min-width: 321px) {
+    .contentList li{
+        max-height: 15%;
+        margin: 0 0 5px 0;
+        border-radius: 30px;
+        list-style-type: none;
+        background-color: rgba(250,235,215, 0.7);
+        transition: ease-in-out .3s;
+        font-size: 75%;
+    }
+}
+
+@media only screen  and (min-width: 1224px) {
+    .contentList li{
+        max-height: 15%;
+        max-width: 50%;
+        margin: 0 0 5px 0;
+        border-radius: 30px;
+        list-style-type: none;
+        background-color: rgba(250,235,215, 0.7);
+        transition: ease-in-out .3s;
+        font-size: 120%;
+    }
+    .contentList li:hover{
+        background-color: rgba(255,127,80, 0.8);
+        transition: ease .3s;
+    }
 }
 
 .infoBlock img{
-    width: 20%;
+    width: 30%;
+    height: 30%;
     border-radius: 30px;
     margin: 4px 25px 0 5px;
 }
-.textInfo{
-    display: inline-grid;
+
+.infoBlock{
+    display: inline-flex;
+    text-align: left;
 }
 
-.contentList li{
-    max-height: 15%;
-    border: 1px solid black;
-    margin: 0 0 5px 0;
-    border-radius: 30px;
-    list-style-type: none;
-    background-color: rgba(250,235,215, 0.7);
-    transition: ease-in-out .3s;
+.infoBlock div span{
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 0;
+    align-self: center;
 }
-.contentList li:hover{
-    background-color: rgba(255,127,80, 0.8);
-    transition: ease .3s;
-}
+
 .contentList {
     padding: 0 5px 0 5px;
+    margin: 5px auto;
+    text-align: -webkit-center;
+}
+
+.textInfo{
+    display: inline-grid;
 }

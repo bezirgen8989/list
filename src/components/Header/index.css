@@ -1,17 +1,28 @@
+@media (max-width: 376px) {
+  .Header-logo {
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .Header {
+    padding: 5px;
+  }
+}
+
 .Header {
   display: grid;
-  justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 1.5rem;
   box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
   background-color: rgba(250,235,215, 0.9);
   transition: ease-in-out .3s;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  grid-template-areas: "searchBlock"
-                        "changePageBlock";
+  grid-template-areas:
+          "headerLogo searchBlock"
+          "headerLogo changePageBlock";
+  grid-template-columns: 45px 1fr;
+  grid-template-rows: 50px 1fr;
 }
 
 .Header:hover{
@@ -20,12 +31,12 @@
 }
 
 .Header-logo {
-  position: absolute;
-  top: 1.5rem;
+  margin-left: 20px;
   left: 1.5rem;
-  width: 5rem;
-  height: 5rem;
+  max-width: 4rem;
+  /*max-height: 5rem;*/
   pointer-events: none;
+  grid-area: headerLogo;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -46,6 +57,7 @@
 .changePage {
   text-align: center;
   grid-area: changePageBlock;
+  margin-bottom: 5px;
 }
 
 .searchBlock{

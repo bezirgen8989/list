@@ -1,6 +1,12 @@
+@media (max-width: 376px) {
+  .Button {
+    background-color: red;
+  }
+}
+
 .Button {
-  height: 2.325rem;
-  background: #767676;
+  min-height: 2rem;
+  background-color: #767676;
   border-radius: 0.25rem;
   padding: 0 1rem;
   outline: 0;

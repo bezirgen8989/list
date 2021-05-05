@@ -13,20 +13,11 @@ const ContentList = ({content}) => {
                                 <span>Name: {item.name}</span>
                                 <span>Status: {item.status}</span>
                                 <span>Species: {item.species}</span>
-                                {/*{!item.origin.name === "unknown" && <span>Species: <a*/}
-                                {/*    href={item.origin.url}*/}
-                                {/*    target="_blank"*/}
-                                {/*    rel="noreferrer"*/}
-                                {/*>{item.origin.name}</a></span>}*/}
-                                {item.origin.name === "unknown"
-                                    ? null
-                                    : <span>Origin: <a
-                                        href={item.origin.url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >{item.origin.name}</a></span>
-                                }
-
+                                {item.origin.name !== "unknown" && <span>Species: <a
+                                    href={item.origin.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >{item.origin.name}</a></span>}
                                 <span>Location: <a
                                     href={item.location.url}
                                     target="_blank"

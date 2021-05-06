@@ -8,6 +8,7 @@ import Loading from "./Loading/Loading";
 import Alert from "./Alert/Alert";
 
 const App = () => {
+    console.log(window.screen)
     const [
         characters,
         dataInfo,
@@ -42,7 +43,7 @@ const App = () => {
             <FetchMoreButton
                 btnText={'Show more elements'}
                 clickFoo={fetchMore}
-                disableInfo={characters.length === 20}
+                disableInfo={characters.length === 20 || isLoading}
             />
         </div>
     );

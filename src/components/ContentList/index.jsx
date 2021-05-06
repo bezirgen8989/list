@@ -8,7 +8,9 @@ const ContentList = ({content}) => {
                 return (
                     <li key={String(item.id)}>
                         <div className={'infoBlock'}>
-                            <img src={item.image} alt={item.image}/>
+                            <div className={'infoBlock__imageBox'} >
+                                <img src={item.image} alt={item.image}/>
+                            </div>
                             <div className={'textInfo'}>
                                 <span>Name: {item.name}</span>
                                 <span>Status: {item.status}</span>

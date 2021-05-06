@@ -1,19 +1,21 @@
-@media only screen and (min-width: 321px) {
+@media (max-width: 376px) {
     .contentList li{
         font-size: 75%;
         max-width: 100%;
     }
 }
 
-@media only screen  and (min-width: 1224px) {
+@media (min-width: 1270px){
     .contentList li{
         max-width: 50%;
-        font-size: 120%;
+        font-size: 130%;
     }
 }
-@media only screen  and (min-width: 1824px) {
+
+@media only screen  and (min-width: 1800px) {
     .contentList li{
         max-width: 50%;
+        font-size: 220%;
     }
 }
 
@@ -30,12 +32,16 @@
     transition: ease .3s;
 }
 
-.infoBlock img{
+.infoBlock__imageBox{
     list-style-type: none;
     width: 30%;
     height: 30%;
-    border-radius: 30px;
     margin: 4px 25px 0 5px;
+    border-radius: 30px;
+}
+.infoBlock__imageBox img{
+    width: 100%;
+    border-radius: 30px;
 }
 
 .infoBlock{

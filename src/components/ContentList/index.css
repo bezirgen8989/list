@@ -1,6 +1,7 @@
 @media only screen and (min-width: 321px) {
     .contentList li{
         font-size: 75%;
+        max-width: 100%;
     }
 }
 
@@ -8,6 +9,11 @@
     .contentList li{
         max-width: 50%;
         font-size: 120%;
+    }
+}
+@media only screen  and (min-width: 1824px) {
+    .contentList li{
+        max-width: 50%;
     }
 }
 

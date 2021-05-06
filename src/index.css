@@ -1,6 +1,23 @@
+@media (max-width: 1280px) {
+  body {
+    background-image: url("assets/backgroundImg/rik and morty theme 1280-1024.JPG");
+  }
+}
+
+@media only screen  and (min-width: 1824px) {
+  body{
+    background-image: url("assets/backgroundImg/rik and morty theme BIG.JPG");
+  }
+}
+
+@media (max-width: 480px) {
+  body{
+    background-image: url("assets/backgroundImg/rik and morty theme iPhoneX.JPG");
+  }
+}
+
 body {
   margin: 0;
-  background-image: url("assets/backgroundImg/rik and morty theme.JPG");
   background-attachment: fixed;
   background-size: 100%;
   font-family: 'Times New Roman', sans-serif;

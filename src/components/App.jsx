@@ -8,6 +8,7 @@ import Loading from "./Loading/Loading";
 import Alert from "./Alert/Alert";
 
 const App = () => {
+    console.log(window.screen)
     const [
         characters,
         dataInfo,

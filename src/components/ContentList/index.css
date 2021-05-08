@@ -1,7 +1,7 @@
 @media (max-width: 376px) {
     .contentList li{
         font-size: 75%;
-        max-width: 100%;
+        max-width: 100% !important;;
     }
 }
 
@@ -20,6 +20,7 @@
 }
 
 .contentList li{
+    max-width: 50%;
     transition: ease-in-out .3s;
     max-height: 15%;
     margin: 0 0 5px 0;

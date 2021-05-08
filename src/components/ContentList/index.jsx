@@ -3,7 +3,7 @@ import './index.css'
 import preLoadImage from '../../assets/loaderImgs/loader.gif'
 
 const ContentList = ({content}) => {
-    const [imageLoaderStatus, setImageLoaderStatus] = useState(false);
+    const [imageLoaderStatus, setImageLoaderStatus] = useState(0);
 
     const imageLoaderFoo = (e)=>{
         setImageLoaderStatus(e.target.clientHeight)

@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import './index.css'
+import preLoadImage from '../../assets/loaderImgs/loader.gif'
 
 const ContentList = ({content}) => {
+    const [imageLoaderStatus, setImageLoaderStatus] = useState(false);
+
+    const imageLoaderFoo = (e)=>{
+        setImageLoaderStatus(e.target.clientHeight)
+    }
+
     return (
         <ul className={'contentList'}>
             {content.map(item => {
@@ -9,7 +16,10 @@ const ContentList = ({content}) => {
                     <li key={String(item.id)}>
                         <div className={'infoBlock'}>
                             <div className={'infoBlock__imageBox'} >
-                                <img src={item.image} alt={item.image}/>
+                                <img src={imageLoaderStatus
+                                    ? item.image
+                                    : preLoadImage
+                                } alt={item.image} onLoad={imageLoaderFoo}/>
                             </div>
                             <div className={'textInfo'}>
                                 <span>Name: {item.name}</span>

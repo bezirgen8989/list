@@ -3,10 +3,11 @@ import './index.css'
 import preLoadImage from '../../assets/loaderImgs/loader.gif'
 
 const ContentList = ({content}) => {
-    const [imageLoaderStatus, setImageLoaderStatus] = useState(0);
+    const [imageLoaderStatus, setImageLoaderStatus] = useState(false);
 
     const imageLoaderFoo = (e)=>{
-        setImageLoaderStatus(e.target.clientHeight)
+        setImageLoaderStatus(Boolean(e.target.clientHeight))
+        console.log(imageLoaderStatus)
     }
 
     return (
@@ -23,7 +24,7 @@ const ContentList = ({content}) => {
                             </div>
                             <div className={'textInfo'}>
                                 <span>Name: {item.name}</span>
-                                <span>Status: {item.status}</span>
+                                {item.status !== "unknown" && <span>Status:{item.status}</span> }
                                 <span>Species: {item.species}</span>
                                 {item.origin.name !== "unknown" && <span>Species: <a
                                     href={item.origin.url}

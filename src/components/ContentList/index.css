@@ -52,6 +52,7 @@
 
 .infoBlock div span{
     border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255,127,80, 0);
     margin: 0;
     padding: 0;
     align-self: center;
@@ -65,4 +66,13 @@
 
 .textInfo{
     display: inline-grid;
+    transition: .3s ease-in-out;
+}
+
+.textInfo span:hover{
+    border: 1px solid whitesmoke;
+    transition-timing-function: linear;
+    transition: ease .3s ;
+    background-color: rgb(255,127,80);
+    color: whitesmoke;
 }

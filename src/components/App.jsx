@@ -9,15 +9,16 @@ import Alert from "./Alert/Alert";
 
 const App = () => {
     const [
-        characters,
+        showCharacters,
         dataInfo,
-        fetch,
+        fetchSearch,
         nextPage,
         prevPage,
         fetchMore,
         isLoading,
         errMessage,
         errStatus] = useFetchContent();
+    console.log(showCharacters)
 
     return (
         <div className="App">
@@ -27,7 +28,7 @@ const App = () => {
             }
 
             <Header
-                onSearch={fetch}
+                onSearch={fetchSearch}
                 disabledInfoNext={dataInfo.next}
                 disabledInfoPrevious={dataInfo.prev}
                 nextPage={nextPage}
@@ -35,14 +36,14 @@ const App = () => {
             />
             {isLoading
                 ? <Loading/>
-                : <ContentList content={characters}/>
+                : <ContentList content={showCharacters}/>
             }
 
 
             <FetchMoreButton
                 btnText={'Show more elements'}
                 clickFoo={fetchMore}
-                disableInfo={characters.length === 20 || isLoading}
+                disableInfo={showCharacters.length === 20 || isLoading || showCharacters.length < 4}
             />
         </div>
     );

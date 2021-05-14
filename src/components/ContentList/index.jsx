@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import './index.css'
 import preLoadImage from '../../assets/loaderImgs/loader.gif'
 
 const ContentList = ({content}) => {
     const [imageLoaderStatus, setImageLoaderStatus] = useState(false);
 
-    const imageLoaderFoo = (e)=>{
+    const imageLoaderFoo = useCallback((e)=>{
         setImageLoaderStatus(Boolean(e.target.clientHeight))
-        console.log(imageLoaderStatus)
-    }
+    }, [])
 
     return (
         <ul className={'contentList'}>

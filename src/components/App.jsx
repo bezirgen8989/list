@@ -18,7 +18,6 @@ const App = () => {
         isLoading,
         errMessage,
         errStatus] = useFetchContent();
-    console.log(showCharacters)
 
     return (
         <div className="App">

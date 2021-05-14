@@ -42,7 +42,7 @@ const App = () => {
             <FetchMoreButton
                 btnText={'Show more elements'}
                 clickFoo={fetchMore}
-                disableInfo={showCharacters.length === 20 || isLoading || showCharacters.length < 4}
+                disableInfo={showCharacters.length === 20 || isLoading || showCharacters.length > 10 }
             />
         </div>
     );

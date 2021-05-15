@@ -9,7 +9,6 @@ export const useFetchContent = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [errStatus, setErrStatus] = useState(false);
     const [errMessage, setErrMessage] = useState('Something wrong');
-
     const [btnStatus, setBtnStatus] = useState(false);
 
     const getData = useCallback(()=>{
@@ -45,7 +44,7 @@ export const useFetchContent = () => {
         } else {
             try {
                 setIsLoading(true);
-                await axios.get(`${url}?name=${searchInputData}`)
+                await axios.get(`https://rickandmortyapi.com/api/character/?name=${searchInputData}`)
                     .then(res => {
                         setCharacters(res.data.results)
                         setShowCharacters(res.data.results.slice(0, 10));
@@ -62,7 +61,7 @@ export const useFetchContent = () => {
                 setErrMessage(err.response.data.error)
             }
         }
-    }, [url]);
+    }, []);
 
     const nextPage = useCallback(() => {
         setUrl(dataInfo.next);

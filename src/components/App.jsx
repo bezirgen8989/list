@@ -17,7 +17,10 @@ const App = () => {
         fetchMore,
         isLoading,
         errMessage,
-        errStatus] = useFetchContent();
+        errStatus,
+        onResetSearchSettings,
+        refBtnStatus
+    ] = useFetchContent();
 
     return (
         <div className="App">
@@ -32,6 +35,8 @@ const App = () => {
                 disabledInfoPrevious={dataInfo.prev}
                 nextPage={nextPage}
                 prevPage={prevPage}
+                onResetSearchSettings={onResetSearchSettings}
+                onResearchBtnStatus={refBtnStatus}
             />
             {isLoading
                 ? <Loading/>

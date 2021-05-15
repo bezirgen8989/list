@@ -30,3 +30,8 @@
   outline: 0;
   border: 0.1rem solid #767676;
 }
+
+.disableSpan button{
+  display: none;
+  color: red;
+}

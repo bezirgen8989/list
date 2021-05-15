@@ -4,11 +4,15 @@ import logo from "../../assets/logo.svg";
 import "./index.css";
 import Button from "../Button";
 
-const Header = ({onSearch, disabledInfoPrevious, disabledInfoNext, prevPage, nextPage}) => (
+const Header = ({onSearch, disabledInfoPrevious, disabledInfoNext, prevPage, nextPage, onResetSearchSettings, onResearchBtnStatus}) => (
     <header className="Header">
         <img src={logo} className="Header-logo" alt="logo"/>
         <div className={'searchBlock'}>
-            <SearchInput onSearch={onSearch}/>
+            <SearchInput
+                onSearch={onSearch}
+                onResetSearchSettings={onResetSearchSettings}
+                onResearchBtnStatus={onResearchBtnStatus}
+            />
         </div>
 
         <div className={'changePage'}>
